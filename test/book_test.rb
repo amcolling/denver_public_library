@@ -25,17 +25,6 @@ class BookTest < Minitest::Test
   def test_publication_date
     book = Book.new({author_first_name: "Harper", author_last_name: "Lee", title: "To Kill a Mockingbird", publication_date: "July 11, 1960"})
     assert_equal "1960", book.book_publication_date
-  end 
+  end
 
-  # > book.author_first_name
-  # # => "Harper"
-  #
-  # > book.author_last_name
-  # # => "Lee"
-  #
-  # > book.title
-  # # => "To Kill a Mockingbird"
-  #
-  # > book.publication_date
-  # # => "1960"
 end
