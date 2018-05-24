@@ -1,23 +1,19 @@
 class Book
-attr_reader :book
+attr_reader :book,
+            :first_name,
+            :last_name,
+            :book_title,
+            :book_publication_date
   def initialize(book)
-    @book = book
+    @first_name = book[:author_first_name]
+    @last_name = book[:author_last_name]
+    @book_title = book[:title]
+    @book_publication_date = book[:publication_date]
   end
 
-  def first_name
-    @book[:author_first_name]
-  end
-
-  def last_name
-    @book[:author_last_name]
-  end
-
-  def book_title
-    @book[:title]
-  end
 
   def book_publication_date
-  date = @book[:publication_date].split
+  date = @book_publication_date.split
     date[2]
   end
 
