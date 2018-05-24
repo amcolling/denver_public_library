@@ -1,9 +1,9 @@
 class Book
-attr_reader :book,
-            :first_name,
-            :last_name,
-            :book_title,
-            :book_publication_date
+attr_accessor :book,
+              :first_name,
+              :last_name,
+              :book_title,
+              :book_publication_date
   def initialize(book)
     @first_name = book[:author_first_name]
     @last_name = book[:author_last_name]

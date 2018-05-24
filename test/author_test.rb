@@ -1,5 +1,6 @@
 require './test/test_helper'
 require "./lib/author"
+require "./lib/book"
 
 class AuthorTest < Minitest::Test
   def test_it_exists
@@ -15,9 +16,9 @@ class AuthorTest < Minitest::Test
   def test_add_book
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     book = Book.new({author_first_name: "Harper", author_last_name: "Lee", title: "To Kill a Mockingbird", publication_date: "July 11, 1960"})
-    expected = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
-    assert_equal 
+    assert_instance_of Book, charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
   end
+
 
 end
 
