@@ -22,19 +22,4 @@ class AuthorTest < Minitest::Test
     book = Book.new({author_first_name: "Charlotte", author_last_name: "Bronte", title: "To Kill a Mockingbird", publication_date: "July 11, 1960"})
     assert_instance_of Array, charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
   end
-
-# => #<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="1847", @title="Villette">
-
-
-
-
 end
-
-# # => #<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="1847", @title="Jane Eyre">
-#
-# > charlotte_bronte.books
-# # => [#<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="10/16/1847", @title="Jane Eyre">]
-#
-# > charlotte_bronte.add_book("Villette", "1853")
-# # => #<Book:0x007f98a9c6ace8 @author_first_name="Charlotte", @author_last_name="Bronte", @publication_date="1847", @title="Villette">
-#
