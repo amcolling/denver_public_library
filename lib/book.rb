@@ -8,13 +8,12 @@ attr_accessor :book,
     @first_name = book[:author_first_name]
     @last_name = book[:author_last_name]
     @book_title = book[:title]
-    @book_publication_date = book[:publication_date]
+    @book_publication_date = format_date(book[:publication_date][-4..-1])
   end
 
 
   def book_publication_date
-  date = @book_publication_date.split
-    date[2]
+    format_date(-1..-4)
   end
 
 end

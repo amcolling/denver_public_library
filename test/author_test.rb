@@ -12,9 +12,8 @@ class AuthorTest < Minitest::Test
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     assert_equal [], charlotte_bronte.books
     book_1 = charlotte_bronte.add_book("Jane Eyre", "October 16, 1847")
-    assert_equal ({}), book_1
     book_2 = charlotte_bronte.add_book("Villette", "1853")
-    assert_equal ({}), book_2
+    assert_equal [book_1, book_2], author.books
   end
 
   def test_add_book
